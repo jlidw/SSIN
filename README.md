@@ -19,7 +19,7 @@ You can download these [datasets](https://drive.google.com/drive/folders/1tiS5Uj
 * For GNN-based solutions, you can refer to their original code: [KCN](https://github.com/tufts-ml/KCN) and [IGNNK](https://github.com/Kaimaoge/IGNNK).
 
 `dataset_collator`:
-* create_data.py: generate the masked data which will be provided to Trainer.py for training and testing.
+* create_data.py: generate the masked sequences which will be provided to Trainer.py for training and testing.
 
 `networks`:
 * Include files about the network layers and the model architecture.
