@@ -20,6 +20,16 @@ You can download the processed datasets from [Google Drive](https://drive.google
 * **BW**: [Climate Data Center (CDC)](https://www.dwd.de/EN/climate_environment/cdc/cdc_node_en.html) of the German Weather Service (DWD); the raw data is quite large (over 500MB) and includes many redundant and noisy info.
 * **PEMS-BAY**: It is first released by [DCRNN](https://github.com/liyaguang/DCRNN/tree/master).
 
+## Baselines
+In the `baselines` folder, you can find the implementation of IDW, OK, TIN, and TPS:
+* **IDW**: self-implementation.
+* **OK**: by using [pykrige.ok.OrdinaryKriging](https://geostat-framework.readthedocs.io/projects/pykrige/en/stable/generated/pykrige.ok.OrdinaryKriging.html).
+* **TIN**: by using [matplotlib.tri](https://matplotlib.org/stable/api/tri_api.html).
+* **TPS**: by using [scipy.interpolate.Rbf](https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.Rbf.html).
+
+For GNN-based baselines, please refer to their original code: [KCN](https://github.com/tufts-ml/KCN) and [IGNNK](https://github.com/Kaimaoge/IGNNK).
+
+
 ## Instructions
 `attn_tvm`:
 * Include the files about the TVM kernel implementation.
@@ -27,7 +37,6 @@ You can download the processed datasets from [Google Drive](https://drive.google
 
 `baselines`:
 * Include the implementation of IDW, OK, TIN, and TPS.
-* For GNN-based solutions, you can refer to their original code: [KCN](https://github.com/tufts-ml/KCN) and [IGNNK](https://github.com/Kaimaoge/IGNNK).
 
 `dataset_collator`:
 * `create_data.py`: generate the masked sequences which will be provided to Trainer.py for training and testing.
