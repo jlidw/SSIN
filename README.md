@@ -12,11 +12,12 @@ The discontinuity of rainfall (usually zero accumulations) means more complex sp
 ##  Datasets
 Two real-world hourly raingauge datasets, HK and BW, are collected and used in this paper. Besides, we take traffic spatial interpolation as another use case and employ one commonly used real-world dataset, PEMS-BAY, to conduct additional experiments.
 
+### Processed Data
 You can download the processed datasets from [Google Drive](https://drive.google.com/drive/folders/1tiS5UjcspNKcWL8RA7J3PxqhwciR5Lg3) and place them in the `data` folder.
 
 ### Raw Data
-* **HK**: This dataset is provided by Hong Kong Observatory (HKO) and the Geotechnical Engineering Office (GEO). Now we only have permission for using, we are communicating with them on how to release data.
-* **BW**: [Climate Data Center (CDC) of the German Weather Service (DWD)](https://www.dwd.de/EN/climate_environment/cdc/cdc_node_en.html).
+* **HK**: It is provided by Hong Kong Observatory (HKO) and Geotechnical Engineering Office (GEO), we are communicating with them on how to release data.
+* **BW**: [Climate Data Center (CDC)](https://www.dwd.de/EN/climate_environment/cdc/cdc_node_en.html) of the German Weather Service (DWD); the raw data is quite large (over 500MB) and includes many redundant and noisy info.
 * **PEMS-BAY**: It is first released by [DCRNN](https://github.com/liyaguang/DCRNN/tree/master).
 
 ## Instructions
