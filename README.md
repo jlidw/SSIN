@@ -3,9 +3,11 @@ The code is for our paper ["SSIN: Self-Supervised Learning for Rainfall Spatial 
 and this paper has been accepted by SIGMOD 2023.
 
 ## About Rainfall Spatial Interpolation
-### Why rainfall spatial interpolation is challenging？
+### Spatial Interpolation vs. Time Series Imputation:
+Spatial interpolation is to “predict” data for any locations with **no historical observations** according to sparse station observations. This problem is fundamentally different and more challenging than multivariate time-series imputation, which assumes data at certain locations is partially missing across time.
 
-### Spatial Interpolation vs. Time Series Imputation
+### Rainfall vs. Other Meteorological Variables:
+The discontinuity of rainfall (usually zero accumulations) means more complex spatial distribution, while other meteorological variables (e.g., temperature and humidity) usually show smoother distribution.
 
 ##  Datasets
 Two real-world hourly raingauge datasets, HK and BW, are collected and used in this paper. 
