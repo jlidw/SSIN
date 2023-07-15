@@ -19,24 +19,32 @@ You can download these [datasets](https://drive.google.com/drive/folders/1tiS5Uj
 * For GNN-based solutions, you can refer to their original code: [KCN](https://github.com/tufts-ml/KCN) and [IGNNK](https://github.com/Kaimaoge/IGNNK).
 
 `dataset_collator`:
-* create_data.py: generate the masked sequences which will be provided to Trainer.py for training and testing.
+* `create_data.py`: generate the masked sequences which will be provided to Trainer.py for training and testing.
 
 `networks`:
 * Include files about the network layers and the model architecture.
 
 `postprocess`:
-* Calculate the RMSE, MAE, and NSE for the predicted results.
+* Calculate the RMSE, MAE, and NSE for predicted results.
 
 `preprocess`:
-* preprocessing.py: preprocess data and general the `pkl` data for training/testing. 
-* dist_angle.py: generate one matrix that stores the distance and azimuth between all location pairs.
+* `preprocessing.py`: preprocess data and general the `pkl` data for training/testing. 
+* `dist_angle.py`: generate one matrix that stores the distance and azimuth between all location pairs.
 
 `utils`:
 * Some configs and useful functions.
 
 ## Run
 ```
-python main_train.py --dataset=hk or python main_train.py --dataset=bw
+python main_train.py --dataset=hk
+```
+
+```
+python main_train.py --dataset=bw
+```
+
+```
+python main_train.py --dataset=bay
 ```
 
 ## Citation
