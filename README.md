@@ -10,7 +10,7 @@ Spatial interpolation is to “predict” data for any locations with **no histo
 The discontinuity of rainfall (usually zero accumulations) means more complex spatial distribution, while other meteorological variables (e.g., temperature and humidity) usually show smoother distribution.
 
 ##  Datasets
-Two real-world hourly raingauge datasets, HK and BW, are collected and used in this paper. Besides, we take traffic spatial interpolation as another use case and employ one commonly used real-world dataset, PEMS-BAY, to conduct additional experiments.
+Two real-world hourly raingauge datasets, **HK** and **BW**, are collected and used in this paper. Besides, we take traffic spatial interpolation as another use case and employ one commonly used real-world dataset, **PEMS-BAY**, to conduct additional experiments.
 
 ### Processed Data
 You can download the processed datasets from [Google Drive](https://drive.google.com/drive/folders/1tiS5UjcspNKcWL8RA7J3PxqhwciR5Lg3) and place them in the `data` folder.
