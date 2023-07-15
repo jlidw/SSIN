@@ -1,8 +1,11 @@
 # SSIN
-The code and datasets are being released...
-
 The code is for our paper ["SSIN: Self-Supervised Learning for Rainfall Spatial Interpolation"](https://dl.acm.org/doi/10.1145/3589321) 
 and this paper has been accepted by SIGMOD 2023.
+
+## About Rainfall Spatial Interpolation
+### Why rainfall spatial interpolation is challenging？
+
+### Spatial Interpolation vs. Time Series Imputation
 
 ##  Datasets
 Two real-world hourly raingauge datasets, HK and BW, are collected and used in this paper. 
