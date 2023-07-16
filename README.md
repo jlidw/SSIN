@@ -16,8 +16,9 @@ Two real-world hourly raingauge datasets, **HK** and **BW**, are collected and u
 Download the processed datasets from [Google Drive](https://drive.google.com/drive/folders/1tiS5UjcspNKcWL8RA7J3PxqhwciR5Lg3) and place them in the `data` folder.
 
 #### How to select rainy timestamps?
-Since rainfall is intermittent, we perform data selection to filter out timestamps with zero/tiny rain to form the final dataset used (HK: 3855 valid timestamps; BW: 3640 valid timestamps). We follow the data selection process below:
-* First, we 
+Since rainfall is intermittent, performing spatial interpolating for all zeros is meaningless, and too many all-zero data may negatively affect model training. We perform data selection to filter out timestamps with zero/tiny rain to form the final dataset used (HK: 3855 valid timestamps; BW: 3640 valid timestamps). We follow the data selection process below:
+* **HK** dataset: Geotechnical Engineering Office (GEO) publishes annual reports \[1\] about rainstorm events. Like existing domain-related works \[2, 3]\, we directly select rainy hours from these rainstorm days. For each hour on rainstorm days, if the num of stations owning valid rainfall values is above five, then it is selected; otherwise, it is discarded.
+* **BW** dataset: No records of rainstorms/heavy rain are available. Hence, we first select rainy days and then select rainy hours. For each day, if the accumulated rainfall at any station >= 25mm, then this day is selected as a valid rainy day. For each valid rainy day, we follow the same hour selection as the HK dataset: for each hour on a rainy day, if the num of stations owning valid rainfall values is above five, then it is selected; otherwise, it is discarded.
 
 ### Raw Data
 * **HK**: It is provided by Hong Kong Observatory (HKO) and Geotechnical Engineering Office (GEO); we are communicating with them on how to release data.
@@ -52,8 +53,10 @@ For GNN-based baselines, please refer to their original code: [KCN](https://gith
 * Calculate the RMSE, MAE, and NSE for predicted results.
 
 `preprocess`:
-* `preprocessing.py`: preprocess data and general the `pkl` data for training/testing. 
-* `dist_angle.py`: generate one matrix that stores the distance and azimuth between all location pairs.
+* `dist_angle.py`: for HK/BW dataset, generate one matrix that stores the distance and azimuth between all location pairs.
+* `generate_traffic_adj_mx.py`: for PEMS-BAY dataset, generate the distance matrix and additional adj_attn_mask (since traffic data is not fully connected, it needs an additional adj_attn_mask for attention operation.). 
+* `preprocessing.py`: preprocess HK/BW dataset and general the `pkl` data for training/testing.
+* 'preprocess_pems_bay.py':  preprocess PEMS-BAY dataset and general the `pkl` data for training/testing.
 
 `utils`:
 * Some configs and useful functions.
