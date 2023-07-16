@@ -15,6 +15,10 @@ Two real-world hourly raingauge datasets, **HK** and **BW**, are collected and u
 ### Processed Data
 Download the processed datasets from [Google Drive](https://drive.google.com/drive/folders/1tiS5UjcspNKcWL8RA7J3PxqhwciR5Lg3) and place them in the `data` folder.
 
+#### How to select rainy timestamps?
+Since rainfall is intermittent, we perform data selection to filter out timestamps with zero/tiny rain to form the final dataset used (HK: 3855 valid timestamps; BW: 3640 valid timestamps). We follow the data selection process below:
+* First, we 
+
 ### Raw Data
 * **HK**: It is provided by Hong Kong Observatory (HKO) and Geotechnical Engineering Office (GEO); we are communicating with them on how to release data.
 * **BW**: The raw data can be downloaded directly from [Climate Data Center (CDC)](https://www.dwd.de/EN/climate_environment/cdc/cdc_node_en.html) of the German Weather Service (DWD); the raw data is quite large (over 500MB) and includes many redundant and noisy info.
