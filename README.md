@@ -84,7 +84,6 @@ python main_train.py --dataset=bay
   number={2},
   pages={1--21},
   year={2023},
-  publisher = {Association for Computing Machinery},
-  url = {https://doi.org/10.1145/3589321}
+  publisher = {Association for Computing Machinery}
 }
 ```
