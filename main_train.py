@@ -67,10 +67,12 @@ def get_data_path(args):
     elif args.dataset.lower() == "bay":
         dataset_dir = f"{base_dir}/PEMS-BAY"
         args.output_dir = f"./output/PEMS-BAY_output/{args.sub_out_dir}"
+        args.data_prefix = "bay"
+
         args.mask_time = 1   # data are 5 mins, too many timestamps, just mask one time for each epoch.
         args.epochs = 2
         args.max_seq_len = 325
-        args.max_pred_per_seq = 65  # now 20%
+        args.max_pred_per_seq = 65  # 20%
         args.batch_size = 64
     else:
         raise NotImplementedError("Unsupported dataset!")
