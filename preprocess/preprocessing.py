@@ -230,14 +230,14 @@ if __name__ == "__main__":
 
     if dataset.lower() == "bw":
         dataset_dir = f"{base_dir}/BW_132_data"
-        info_path = f"{dataset_dir}/BW_stations_info.csv"
+        info_path = f"{dataset_dir}/bw_stations_info.csv"
         dist_mat_path = f"{dataset_dir}/dist_angle_mat.npy"
         data_dir = f"{dataset_dir}/rain_csv/*/*.csv"
         out_dir = f"{dataset_dir}/pkl_data"
         col_name = "rainfall"  # col name for used data
     elif dataset.lower() == "hk":
         dataset_dir = f"{base_dir}/HK_123_data"
-        info_path = f"{dataset_dir}/hko_stations_info.csv"
+        info_path = f"{dataset_dir}/hk_stations_info.csv"
         dist_mat_path = f"{dataset_dir}/dist_angle_mat.npy"
         data_dir = f"{dataset_dir}/rain_csv/*/*.csv"
         out_dir = f"{dataset_dir}/pkl_data"
