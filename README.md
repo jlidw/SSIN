@@ -7,7 +7,7 @@ and this paper has been accepted by SIGMOD 2023.
 Spatial interpolation is to “predict” data for **any locations with no historical observations** according to sparse station observations. This problem is fundamentally different and more challenging than multivariate time-series imputation, which assumes data at **certain locations** is **partially missing across time**.
 
 ### Rainfall vs. Other Meteorological Variables:
-The **discontinuity** of rainfall (usually zero accumulations) means more complex spatial distribution, while other meteorological variables (e.g., temperature and humidity) usually show smoother distribution.
+The **intermittency** of rainfall (usually zero accumulations) means more complex spatial distribution, while other meteorological variables (e.g., temperature and humidity) usually show smoother distribution.
 
 ##  Datasets
 Two real-world hourly raingauge datasets, **HK** and **BW**, are collected and used in this paper. Besides, we take traffic spatial interpolation as another use case and employ one commonly used real-world dataset, **PEMS-BAY**, to conduct additional experiments.
