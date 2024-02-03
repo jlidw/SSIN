@@ -1,5 +1,5 @@
 # SSIN
-The code is for our paper ["SSIN: Self-Supervised Learning for Rainfall Spatial Interpolation"](https://dl.acm.org/doi/10.1145/3589321) 
+The code is for our paper ["SSIN: Self-Supervised Learning for Rainfall Spatial Interpolation"](https://arxiv.org/abs/2311.15530) 
 and this paper has been accepted by SIGMOD 2023.
 
 ## About Rainfall Spatial Interpolation
